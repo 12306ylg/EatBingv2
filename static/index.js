@@ -1,9 +1,5 @@
 const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
-if (cookie("BINLANG")) {
-            $('BINLANG').text(cookie('BINLANG'));
-            $('BINLANG').val(cookie('BINLANG'));
-}
-let BINLANG = cookie('BINLANG');
+return cookie('BINLANG') ? parseInt(cookie('BINLANG')) : navigator.language;
 (function(w) {
     function getJsonI18N() {
         // https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/language
@@ -13,9 +9,11 @@ let BINLANG = cookie('BINLANG');
             { regex: /^ja\b/, lang: 'ja' },
             { regex: /.*/, lang: 'en'}
         ]
-        const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
+        
       function  setlang() {
-        const lang = document.getElementById('BINLANG').value // 获取指定 id 的内容
+        const lang = document.getElementById('BINLANG').value // 获取指定 id 的内
+        document.cookie = document.cookie+"BINLANG="+BINLANG
+        
         }
         return $.ajax({
             url: `./static/i18n/${lang}.json`,
