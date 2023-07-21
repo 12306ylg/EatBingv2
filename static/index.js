@@ -10,7 +10,7 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
             { regex: /.*/, lang: 'en'}
         ]
 
-        const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
+        const lang = BINLANG
         
         return $.ajax({
             url: `./static/i18n/${lang}.json`,
