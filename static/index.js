@@ -1,5 +1,9 @@
 const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
-
+if (cookie("BINLANG")) {
+            $('BINLANG').text(cookie('BINLANG'));
+            $('BINLANG').val(cookie('BINLANG'));
+}
+let BINLANG = cookie('BINLANG');
 (function(w) {
     function getJsonI18N() {
         // https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/language
