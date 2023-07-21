@@ -1,21 +1,20 @@
-const MODE_NORMAL = 1,
-    MODE_ENDLESS = 2,
-    MODE_PRACTICE = 3;
+const MODE_NORMAL = 1,MODE_ENDLESS = 2,MODE_PRACTICE = 3;
 const blang = getCookie("BINLANG");
-if (blang != "") {
-    const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
-} else {
-    const lang = blang
 
     function setlang() {
-        document.cookie = document.cookie "BINLANG="
-        document.getElementById('BINLANG').value
+        const langu=document.getElementById('BINLANG').value
+        document.cookie = document.cookie"BINLANG="${langu}
 
     }
     (function(w) {
             function getJsonI18N() {
                 // https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/language
-
+             if (blang!="") {
+              const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
+              } 
+              else {
+                  const lang = blang;
+                   }
                 const LANGUAGES = [{
                         regex: /^zh\b/,
                         lang: 'zh'
