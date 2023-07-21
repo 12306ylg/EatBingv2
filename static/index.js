@@ -6,7 +6,7 @@ const blang = getCookie("BINLANG");
         document.cookie = document.cookie"BINLANG="${langu}
 
     }
-    (function(w) {
+    (function(w)) {
             function getJsonI18N() {
                 // https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/language
              if (blang!="") {
