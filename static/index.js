@@ -6,7 +6,7 @@ const MODE_NORMAL = 1,MODE_ENDLESS = 2,MODE_PRACTICE = 3;
         document.cookie = document.cookie + "BINLANG=" + ${langu}
 
     }
-    (function(w)) {
+    (function(w) {
             function getJsonI18N() {
                 // https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/language
              if (blang!="") {
