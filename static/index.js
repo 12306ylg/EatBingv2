@@ -1,12 +1,13 @@
 const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
-var lang=getCookie("BINLANG");
-if (lang="")
+const blang=getCookie("BINLANG");
+if ($blang = "")
   {
-    var lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
+    const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
   }
+else { 
+  const lang = $blang
 function  setlang() {
-        var lang = document.getElementById('BINLANG').value // 获取指定 id 的内
-        document.cookie = document.cookie+"BINLANG="+lang
+        document.cookie = document.cookie"BINLANG="document.getElementById('BINLANG').value
         
         }
 (function(w) {
