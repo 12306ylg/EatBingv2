@@ -10,7 +10,7 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
             { regex: /.*/, lang: 'en'}
         ]
 
-        const lang = BINLANG
+        const lang = document.getElementById('BINLANG').value // 获取指定 id 的内容
         
         return $.ajax({
             url: `./static/i18n/${lang}.json`,
@@ -552,7 +552,7 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
     }
 
     w.save_cookie = function() {
-        const settings = ['username', 'message', 'keyboard', 'title', 'gameTime'];
+        const settings = ['username', 'message', 'keyboard', 'title', 'gameTime','BINLANG'];
         for (let s of settings) {
             let value=$(`#${s}`).val();
             if(value){
