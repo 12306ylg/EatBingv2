@@ -1,12 +1,12 @@
 const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
-const lang=getCookie("BINLANG");
+var lang=getCookie("BINLANG");
   
 (function(w) {
     function getJsonI18N() {
         // https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/language
         if (lang="")
   {
-    const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
+    var lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
   }
         const LANGUAGES = [
             { regex: /^zh\b/, lang: 'zh' },
@@ -15,7 +15,7 @@ const lang=getCookie("BINLANG");
         ]
         
       function  setlang() {
-        const lang = document.getElementById('BINLANG').value // 获取指定 id 的内
+        var lang = document.getElementById('BINLANG').value // 获取指定 id 的内
         document.cookie = document.cookie+"BINLANG="+BINLANG
         
         }
