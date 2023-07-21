@@ -1,11 +1,11 @@
 const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
 const blang=getCookie("BINLANG");
-if ($blang = "")
+if (blang!="")
   {
     const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
   }
 else { 
-  const lang = $blang
+  const lang = blang
 function  setlang() {
         document.cookie = document.cookie"BINLANG="document.getElementById('BINLANG').value
         
