@@ -14,10 +14,7 @@ _🐷 网页小游戏 🧊_
 
 小游戏：吃掉小冰块
 
-
-[我的b站](https://space.bilibili.com/316381099)
-|
-[线上版本](https://iambilibin.github.io/EatBing)
+[线上版本](https://mixueicecreamandtea.github.io/EatBingv2/)
 
 ## 可选功能
 
