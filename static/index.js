@@ -9,9 +9,10 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
             { regex: /^ja\b/, lang: 'ja' },
             { regex: /.*/, lang: 'en'}
         ]
-
+        const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
+      function  setlang() {
         const lang = document.getElementById('BINLANG').value // 获取指定 id 的内容
-        
+        }
         return $.ajax({
             url: `./static/i18n/${lang}.json`,
             dataType: 'json',
