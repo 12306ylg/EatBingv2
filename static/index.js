@@ -1,16 +1,16 @@
 const MODE_NORMAL = 1,MODE_ENDLESS = 2,MODE_PRACTICE = 3;
-const blang = getCookie("BINLANG");
 
     function setlang() {
-        const langu=document.getElementById('BINLANG').value
-        document.cookie = document.cookie"BINLANG="${langu}
+        const langu=document.getElementById('BINLANG').value;
+        const blang = getCookie("BINLANG");
+        document.cookie = document.cookie + "BINLANG=" + ${langu}
 
     }
     (function(w)) {
             function getJsonI18N() {
                 // https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/language
              if (blang!="") {
-              const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
+              const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang;
               } 
               else {
                   const lang = blang;
