@@ -1,25 +1,25 @@
 const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
 var lang=getCookie("BINLANG");
-  
+if (lang="")
+  {
+    var lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
+  }
+function  setlang() {
+        var lang = document.getElementById('BINLANG').value // 获取指定 id 的内
+        document.cookie = document.cookie+"BINLANG="+lang
+        
+        }
 (function(w) {
     function getJsonI18N() {
         // https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/language
-        if (lang="")
-  {
-    var lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
-    document.cookie = document.cookie+"BINLANG="+lang
-  }
+        
         const LANGUAGES = [
             { regex: /^zh\b/, lang: 'zh' },
             { regex: /^ja\b/, lang: 'ja' },
             { regex: /.*/, lang: 'en'}
         ]
         
-      function  setlang() {
-        var lang = document.getElementById('BINLANG').value // 获取指定 id 的内
-        document.cookie = document.cookie+"BINLANG="+lang
-        
-        }
+      
         return $.ajax({
             url: `./static/i18n/${lang}.json`,
             dataType: 'json',
