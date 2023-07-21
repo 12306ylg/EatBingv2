@@ -1,6 +1,5 @@
 const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
-return cookie('BINLANG') ? parseInt(cookie('BINLANG')) : navigator.language;
-var lang=getCookie("BINLANG");
+const lang=getCookie("BINLANG");
   
 (function(w) {
     function getJsonI18N() {
