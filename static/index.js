@@ -7,6 +7,7 @@ var lang=getCookie("BINLANG");
         if (lang="")
   {
     var lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
+    document.cookie = document.cookie+"BINLANG="+lang
   }
         const LANGUAGES = [
             { regex: /^zh\b/, lang: 'zh' },
@@ -16,7 +17,7 @@ var lang=getCookie("BINLANG");
         
       function  setlang() {
         var lang = document.getElementById('BINLANG').value // 获取指定 id 的内
-        document.cookie = document.cookie+"BINLANG="+BINLANG
+        document.cookie = document.cookie+"BINLANG="+lang
         
         }
         return $.ajax({
