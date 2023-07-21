@@ -1,9 +1,14 @@
 const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
 return cookie('BINLANG') ? parseInt(cookie('BINLANG')) : navigator.language;
+var lang=getCookie("BINLANG");
+  
 (function(w) {
     function getJsonI18N() {
         // https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/language
-        
+        if (lang="")
+  {
+    const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
+  }
         const LANGUAGES = [
             { regex: /^zh\b/, lang: 'zh' },
             { regex: /^ja\b/, lang: 'ja' },
@@ -23,7 +28,7 @@ return cookie('BINLANG') ? parseInt(cookie('BINLANG')) : navigator.language;
             success: data => res = data,
             error: () => alert('找不到语言文件: ' + lang)
         }).responseJSON
-    }
+    }}
 
     const I18N = getJsonI18N()
 
