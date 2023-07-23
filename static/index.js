@@ -12,9 +12,9 @@ const MODE_NORMAL = 1,
 				document.cookie = "lang=${blang}";
 
 			}
-			const binln = docCookies.getItem("lang")
+			const binln = docCookies.hasItem(lang);
 			// https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/language
-			if (!lang || !this.hasItem(lang)) { return false; }
+			if (this.hasItem(lang)) 
 			{
 				const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
 			}
