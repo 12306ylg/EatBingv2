@@ -14,7 +14,7 @@ const MODE_NORMAL = 1,
 			}
 			const binln = docCookies.hasItem(lang);
 			// https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/language
-			if (this.hasItem(lang)) 
+			if (docCookies.hasItem(lang)) 
 			{
 				const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
 			}
