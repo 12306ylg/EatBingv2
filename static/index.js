@@ -9,7 +9,7 @@ const MODE_NORMAL = 1,MODE_ENDLESS = 2,MODE_PRACTICE = 3;
     (function(w) {
             function getJsonI18N() {
                 // https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/language
-             if (blang!="") {
+             if (blang="null") {
               const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang;
               } 
               else {
