@@ -3,13 +3,14 @@ const MODE_NORMAL = 1,MODE_ENDLESS = 2,MODE_PRACTICE = 3;
     function setlang() {
         //https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie
         const blang=document.getElementById('BINLANG').value;
-        docCookies.setItem("blang", _blang);
+        docCookies.setItem("blang", blang);
 
     }
     (function(w) {
             function getJsonI18N() {
+                const binln = docCookies.getItem("blang")
                 // https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/language
-             if (docCookies.getItem("blang")="null") {
+             if (binln !="null") {
               const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang;
               } 
               else {
