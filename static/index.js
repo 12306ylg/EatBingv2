@@ -3,18 +3,18 @@ const MODE_NORMAL = 1,MODE_ENDLESS = 2,MODE_PRACTICE = 3;
     function setlang() {
         //https://developer.mozilla.org/zh-CN/docs/Web/API/Document/cookie
         const blang=document.getElementById('BINLANG').value;
-        docCookies.setItem("blang", blang);
+        document.cookie = "lang="blang;
 
     }
     (function(w) {
             function getJsonI18N() {
-                const binln = docCookies.getItem("blang")
+                const binln = docCookies.getItem("lang")
                 // https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/language
              if (binln ="null") {
               const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang;
               } 
               else {
-                  const lang = docCookies.getItem("blang");
+                  const lang = docCookies.getItem("lang");
                    }
                 const LANGUAGES = [{
                         regex: /^zh\b/,
