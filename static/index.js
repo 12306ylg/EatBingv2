@@ -16,7 +16,7 @@ const MODE_NORMAL = 1,
 			// https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/language
 			if (binln = "null")
 			{
-				const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang;
+				const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
 			}
 			else
 			{
