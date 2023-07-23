@@ -14,7 +14,7 @@ const MODE_NORMAL = 1,
 			}
 			const binln = docCookies.getItem("lang")
 			// https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/language
-			if (binln = "null")
+			if (!lang || !this.hasItem(lang)) { return false; }
 			{
 				const lang = LANGUAGES.find(l => l.regex.test(navigator.language)).lang
 			}
