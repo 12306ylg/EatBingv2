@@ -9,7 +9,7 @@ _🐷 网页小游戏 🧊_
 
 </div>
 
-
+http://localhost/https://github.com/12306ylg/EatBingv2/raw/re/deploy.json
 ## 简介
 
 小游戏：吃掉小冰块
